@@ -95,9 +95,9 @@ class Crawler(val seed: String, val traversal: SiteTraversal, val logger: Logger
     *     --- if there are some threads running, wait and check again since one of them
     *         might add a new page
     *
-    * - A slave thread is similar to a master thread by doesn't
+    * - A slave thread is similar to a master thread but doesn't
     *   create new threads, and doesn't wait. It, instead, notifies the master thread
-    *   that it has existed so that if it needs a new thread it can create one
+    *   that it has exited so that if it needs a new thread it can create one
     *
     * @param numSlaveThreads The maximum number of slave threads to be created so
     *                        that at any point, there's only numThreads + 1 threads
